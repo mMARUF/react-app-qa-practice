@@ -1,0 +1,11 @@
+{
+  "validUser": {
+    "username": "SomeUser_name",
+    "password": "TopSecret1234!",
+    "nameInDashboard": "SomeName"
+  },
+  "invalidUser": {
+    "username": "SomeUser_name",
+    "password": "InCorrectPassword"
+  }
+}

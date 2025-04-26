@@ -11,5 +11,21 @@
         "favouriteFruit": "Mango",
         "favouriteMovie": "V for Vendetta",
         "favouriteNumber": "The last prime number"
+    },
+    "incomplete": {},
+    "updatableuser": {
+        "name": "Md. Maruf Rahman 2",
+        "password": "12345",
+        "favouriteFruit": "Mango2",
+        "favouriteMovie": "The Avengers",
+        "favouriteNumber": 100
+    },
+    "Maruf 4": {},
+    "maruf1": {
+        "name": "Md. Maruf Rahman 1",
+        "password": "12345",
+        "favouriteFruit": "Mango",
+        "favouriteMovie": "Avengers Infinity War",
+        "favouriteNumber": 7
     }
 }

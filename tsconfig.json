@@ -13,6 +13,6 @@
     "target": "ESNext",
     "resolveJsonModule": true
   },
-  "include": ["./src/**/*"],
+  "include": ["./src/**/*","apiTest/**/*"],
   "files": ["externals.d.ts"]
 }
