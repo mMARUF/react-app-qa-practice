@@ -29,7 +29,7 @@ These tests ensure the reliability of the login and logout workflows and validat
 
 ---
 
-### Jest Tests
+### Jest Test(s)
 Jest has been used to test the **API functionality** of the backend. Below are the key tests implemented in `api.test.js`:
 
 1. **Root Endpoint**:
