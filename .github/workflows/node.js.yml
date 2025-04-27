@@ -40,7 +40,7 @@ jobs:
       # Step 6: Run Jest tests
       - name: Run Jest tests
         run: yarn test
-        timeout-minutes: 2
+        timeout-minutes: 1
         continue-on-error: true
 
       # Step 7: Run Cypress tests
@@ -52,8 +52,14 @@ jobs:
         run: |
           npm install -g allure-commandline --save-dev
           
-      # Step 9: Generate Allure reports (optional)
+      # Step 9: Generate Allure report
       - name: Generate Allure report
-        run: |
-          yarn allure:generate
-          yarn allure:open
+        run: allure generate allure-results --clean -o allure-report
+
+      # Step 10: Publish Allure report to GitHub Pages
+      - name: Publish Allure report to GitHub Pages
+        if: github.ref == 'refs/heads/master'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: allure-report
