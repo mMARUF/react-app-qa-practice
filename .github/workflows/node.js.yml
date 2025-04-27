@@ -27,17 +27,27 @@ jobs:
       - name: Install dependencies
         run: yarn install
 
-      # Step 4: Run Jest tests
+      # Step 4: Start the application
+      - name: Start the application
+        run: yarn start &
+        env:
+          CI: true
+
+      # Step 5: Wait for the application to be ready
+      - name: Wait for application to be ready
+        run: npx wait-on http://localhost:8080
+
+      # Step 6: Run Jest tests
       - name: Run Jest tests
         run: yarn test
         timeout-minutes: 2
         continue-on-error: true
 
-      # Step 5: Run Cypress tests
+      # Step 7: Run Cypress tests
       - name: Run Cypress tests
         run: npx cypress run
 
-      # Step 6: Generate Allure reports (optional)
+      # Step 8: Generate Allure reports (optional)
       - name: Generate Allure report
         run: |
           yarn allure:generate
