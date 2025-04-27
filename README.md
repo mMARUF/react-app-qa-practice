@@ -50,6 +50,19 @@ Jest has been used to test the **API functionality** of the backend. Below are t
 
 These tests ensure the reliability of the backend API by validating its behavior under various scenarios.
 
+4. **CI/CD Pipeline**:
+A CI/CD pipeline has been implemented using **GitHub Actions** to automate the testing and deployment process. Below are the key steps in the pipeline:
+
+   - The pipeline checks out the code from the repository whenever there is a push or pull request to the `master` branch
+   - The pipeline sets up Node.js (version 20.0.0) to ensure compatibility with the project
+   - All project dependencies are installed using `yarn install`.
+   - The pipeline runs Jest tests to validate the backend API functionality.
+   - The application is started using `webpack-dev-server`, and Cypress tests are executed to validate the UI functionality.
+   - Allure reports are generated to provide detailed insights into the test results (optional)
+
+This pipeline ensures that all tests are executed automatically and provides immediate feedback on the reliability of the platform.
+
+
 ---
 
 ### Notes
