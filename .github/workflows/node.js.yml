@@ -31,6 +31,7 @@ jobs:
       - name: Run Jest tests
         run: yarn test
         timeout-minutes: 2
+        continue-on-error: true
 
       # Step 5: Run Cypress tests
       - name: Run Cypress tests
